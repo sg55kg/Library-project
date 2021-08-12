@@ -9,8 +9,11 @@ addButton.addEventListener('click', function() {
 
 submitBook.addEventListener('click', function() {
     addNewDiv.style.display = 'none';
+    addBook();
 })
 
+let book;
+
 function addBook() {
-    
+    myLibrary.push(book);
 }

@@ -14,9 +14,25 @@ h1 {
     background: darkslategray;
     color: white;
     display: flex;
+    height:auto;
+    justify-content:start;
+}
+
+#book {
+    border: 1px solid white;
+    align-self:center;
+}
+
+#open-add-div {
+    height: 50px;
+    width: 100px;
+    position: fixed;
 }
 
 #add-new {
     align-items: center;
+    border:1px solid white;
 }
+
+
 
