@@ -1,0 +1,20 @@
+body {
+    background-color: darkslategray;
+}
+
+body > h1 {
+    font-size: 70px;
+    color:ghostwhite;
+    padding-left: 30px;
+}
+
+.main-panel {
+    background-color:lightslategrey;
+    size: 60%;
+    border:firebrick solid 2px;
+    
+}
+
+.user-input-area {
+    background-color: lightslategrey;
+}
