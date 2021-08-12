@@ -1,0 +1,17 @@
+header {
+    color:white;
+    background-color:darkslategray;
+    font: 30px 'Roboto Mono', monospace;
+    
+}
+
+h1 {
+    margin: 0 10px;
+    background-color: darkslategray;
+}
+
+.main-container {
+    background:darkslategray;
+    display: flex;
+}
+
