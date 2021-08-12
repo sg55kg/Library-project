@@ -10,8 +10,13 @@ h1 {
     background-color: darkslategray;
 }
 
-.main-container {
-    background:darkslategray;
+#main-container {
+    background: darkslategray;
+    color: white;
     display: flex;
+}
+
+#add-new {
+    align-items: center;
 }
 
