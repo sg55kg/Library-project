@@ -15,18 +15,23 @@ h1 {
     color: white;
     display: flex;
     height:auto;
-    justify-content:start;
+    justify-content:space-evenly;
+    width: 100%;
 }
 
 #book {
     border: 1px solid white;
     align-self:center;
+    margin: 20px;
+    padding: 10px;
 }
 
 #open-add-div {
     height: 50px;
     width: 100px;
-    position: fixed;
+    float: right;
+    position:static;
+    margin: 20px;
 }
 
 #add-new {
