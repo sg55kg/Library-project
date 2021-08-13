@@ -4,7 +4,7 @@ let submitBook = document.getElementById('submit-new-book');
 let myLibrary = [];
 
 addButton.addEventListener('click', function() {
-    addNewDiv.style.display = 'block';
+    addNewDiv.style.display = 'flex';
 })
 
 submitBook.addEventListener('click', function() {
