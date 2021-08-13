@@ -5,15 +5,18 @@ header {
     
 }
 
+body {
+    background:darkslategray;
+}
+
 h1 {
     margin: 0 10px;
     background-color: darkslategray;
 }
 
 #main-container {
-    background: darkslategray;
     color: white;
-    display: flex;
+    display: flexbox;
     height:auto;
     justify-content:space-evenly;
     width: 100%;
@@ -21,10 +24,13 @@ h1 {
 
 #book-list > h2 {
     padding-left: 20px;
+    margin: 0px 0px;
 }
 
 #book {
     border: 1px solid white;
+    background: dimgray;
+    width: 200px;
     align-self:center;
     margin: 20px;
     padding: 10px;
