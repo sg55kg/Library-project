@@ -19,6 +19,10 @@ h1 {
     width: 100%;
 }
 
+#book-list > h2 {
+    padding-left: 20px;
+}
+
 #book {
     border: 1px solid white;
     align-self:center;
