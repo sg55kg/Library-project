@@ -15,26 +15,21 @@ addButton.addEventListener('click', function() {
 submitBook.addEventListener('click', function() {
     addNewDiv.style.display = 'none';
     addBook();
-    console.log(Book);
+    console.log(myLibrary);
 })
 
 function addBook() {
-    //need to add a newBook method that will add a new item to the array
-    //myLibrary.push(newBook);
+    //this works and gets user input and console logs the library array
+    getBookInfo();
 }
 
-class Book {
-    constructor (
-        title = 'Test',
-        author = 'Test',
-        pages = '27',
-        readStatus = true
-    ) {
+function Book(title, author, pages, readStatus) {
+    
         this.title = title;
         this.author = author;
         this.pages = pages;
         this.readStatus = readStatus;
-    }
+    
 }
 
 const getBookInfo = () => {
@@ -42,6 +37,10 @@ const getBookInfo = () => {
     const author = getAuthor.value;
     const pages = getPages.value;
     const readStatus = getReadStatus.checked;
+
+    let newBook = new Book(title, author, pages, readStatus);
+    myLibrary.push(newBook);
 }
+
 
 console.log(myLibrary);
