@@ -10,6 +10,12 @@ let myLibrary = [];
 
 addButton.addEventListener('click', function() {
     addNewDiv.style.display = 'flex';
+    // need to clear the input fields when this loads
+
+    /*getTitle.reset();
+    getAuthor.reset();
+    getPages.reset();
+    getReadStatus.reset(); doesn't work in either button eventListener*/
 })
 
 submitBook.addEventListener('click', function() {
