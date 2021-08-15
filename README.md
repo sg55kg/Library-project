@@ -1,6 +1,9 @@
 # Library-project
 Odin Library Project
 
+Update(8/15/21):
+More javascript today. Now the new book information is displayed on the page, but it does not inherit the book div's style. Next up will be fixing that and then adding a server to save user inputted books when the page reloads.
+
 Update(8/14/21):
 Worked more on the javascript. Now it takes user input and makes a new book which is pushed into the MyLibrary array, and right now the array is just console logged. 
 
