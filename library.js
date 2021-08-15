@@ -2,7 +2,7 @@ let addButton = document.getElementById('open-add-div');
 let addNewDiv = document.getElementById('add-new');
 let submitBook = document.getElementById('submit-new-book');
 let bookList = document.getElementById('book-list');
-//let inputField = document.getElementsByClassName('.input');
+//let inputField = document.querySelector('.input');
 let getTitle = document.getElementById('title');
 let getAuthor = document.getElementById('author');
 let getPages = document.getElementById('pages');
@@ -12,7 +12,6 @@ let myLibrary = [];
 
 addButton.addEventListener('click', function() {
     addNewDiv.style.display = 'flex';
-    //inputField.reset();
     // need to clear the input fields when this loads
 
 })
@@ -52,7 +51,7 @@ const getBookInfo = () => {
 
     const readStatus = getReadStatus.checked;
     let readNode = document.createElement('p');
-    readNode.innerText = `Complete? ${readStatus}`;
+    readNode.innerText = `Read status: ${readStatus}`;
 
     let newBook = new book(title, author, pages, readStatus);
     myLibrary.push(newBook);
