@@ -1,6 +1,8 @@
 let addButton = document.getElementById('open-add-div');
 let addNewDiv = document.getElementById('add-new');
 let submitBook = document.getElementById('submit-new-book');
+let bookList = document.getElementById('book-list');
+let bookSec = document.getElementById('book');
 let getTitle = document.getElementById('title');
 let getAuthor = document.getElementById('author');
 let getPages = document.getElementById('pages');
@@ -20,16 +22,12 @@ addButton.addEventListener('click', function() {
 
 submitBook.addEventListener('click', function() {
     addNewDiv.style.display = 'none';
-    addBook();
+    getBookInfo();
     console.log(myLibrary);
 })
 
-function addBook() {
-    //this works and gets user input and console logs the library array
-    getBookInfo();
-}
 
-function Book(title, author, pages, readStatus) {
+function book(title, author, pages, readStatus) {
     
         this.title = title;
         this.author = author;
@@ -39,14 +37,33 @@ function Book(title, author, pages, readStatus) {
 }
 
 const getBookInfo = () => {
-    const title = getTitle.value;
-    const author = getAuthor.value;
-    const pages = getPages.value;
-    const readStatus = getReadStatus.checked;
+    let bookDiv = document.createElement('div');
+    bookDiv.className = 'book';
+    bookList.appendChild(bookDiv);
 
-    let newBook = new Book(title, author, pages, readStatus);
+    const title = getTitle.value;
+    let titleNode = document.createElement('p');
+    titleNode.innerText = `Title: ${title}`;
+
+    const author = getAuthor.value;
+    let authorNode = document.createElement('p');
+    authorNode.innerText = `Author: ${author}`;
+
+    const pages = getPages.value;
+    let pageNode = document.createElement('p');
+    pageNode.innerText = `Pages: ${pages}`;
+
+    const readStatus = getReadStatus.checked;
+    let readNode = document.createElement('p');
+    readNode.innerText = `Complete? ${readStatus}`;
+
+    let newBook = new book(title, author, pages, readStatus);
     myLibrary.push(newBook);
+
+    bookDiv.appendChild(titleNode);
+    bookDiv.appendChild(authorNode);
+    bookDiv.appendChild(pageNode);
+    bookDiv.appendChild(readNode);
+
 }
 
-
-console.log(myLibrary);
