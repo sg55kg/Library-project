@@ -2,7 +2,7 @@ let addButton = document.getElementById('open-add-div');
 let addNewDiv = document.getElementById('add-new');
 let submitBook = document.getElementById('submit-new-book');
 let bookList = document.getElementById('book-list');
-let bookSec = document.getElementById('book');
+//let inputField = document.getElementsByClassName('.input');
 let getTitle = document.getElementById('title');
 let getAuthor = document.getElementById('author');
 let getPages = document.getElementById('pages');
@@ -12,12 +12,9 @@ let myLibrary = [];
 
 addButton.addEventListener('click', function() {
     addNewDiv.style.display = 'flex';
+    //inputField.reset();
     // need to clear the input fields when this loads
 
-    /*getTitle.reset();
-    getAuthor.reset();
-    getPages.reset();
-    getReadStatus.reset(); doesn't work in either button eventListener*/
 })
 
 submitBook.addEventListener('click', function() {
@@ -38,7 +35,7 @@ function book(title, author, pages, readStatus) {
 
 const getBookInfo = () => {
     let bookDiv = document.createElement('div');
-    bookDiv.className = 'book';
+    bookDiv.classList.add('book');
     bookList.appendChild(bookDiv);
 
     const title = getTitle.value;

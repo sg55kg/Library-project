@@ -31,9 +31,10 @@ h1 {
     padding-left: 20px;
     padding-top: 30px;
     margin: 0px 0px;
+    flex-direction: row;
 }
 
-#book {
+.book {
     border: 1px solid white;
     background: dimgray;
     border-radius: 6px;
