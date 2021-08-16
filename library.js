@@ -28,12 +28,18 @@
          this.getBookInfo();
       },
       changeReadStatus: function() {
-         //change read status of book here, might also need a function so it doesn't just say true/false
+         if(this.readStatus == 'true') {
+            console.log('false');
+         }
       },
       bindEvents: function() {
          this.addButton.addEventListener('click', this.displayAddDiv.bind(this));
          this.submitBook.addEventListener('click', this.addBook.bind(this));
-         this.toggleRead.addEventListener('click', this.changeReadStatus.bind(this));
+         this.toggleRead.addEventListener('click', function() {
+            
+               console.log('test'); //only works on the first button, new buttons don't have this function b/c id
+            
+         });
          
       },
       getBookInfo: function() {
@@ -64,8 +70,9 @@
          let readNode = document.createElement('p');
          readNode.innerText = `Read status: ${readStatus}`;
 
-         let readBtn = document.createElement('button'); //makes an empty button
-         //readButton.innerText = function that makes it say mark read or mark unread based on true/false
+         let readBtn = new this.toggleRead //makes an empty button, needs a constructor for new buttons or it only works on one
+         //readBtn.classList.add('toggle-read');
+         readBtn.innerText = 'Toggle Read';
 
          let newBook = new book(title, author, pages, readStatus);
          this.library.push(newBook);

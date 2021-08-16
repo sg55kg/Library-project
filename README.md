@@ -1,6 +1,9 @@
 # Library-project
 Odin Library Project
 
+Update(8/16/21):
+    Working on a button for each new book div that can toggle the read status, but it got messy pretty fast. I might need to look at some of the example solutions on Odin if I can't figure it out. I think I might need a constructor for every new button. Right now the toggle read 'test' function only works on the first button because I used getElementById. QuerySelector and QuerySelectorAll didn't seem to help.
+
 Update(8/15/21):
     More javascript today. Now the new book information is displayed on the page, but it does not inherit the book div's style. Next up will be fixing that and then adding a server to save user inputted books when the page reloads.
 
