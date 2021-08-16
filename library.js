@@ -1,4 +1,3 @@
-
 (function () {
    let myLibrary = {
       library: [],
@@ -18,6 +17,11 @@
       },
       displayAddDiv: function() {
          this.addNewDiv.style.display = 'flex';
+         this.getTitle.value = '';
+         this.getAuthor.value = '';
+         this.getPages.value = '';
+         this.getReadStatus.unchecked;
+         //this.input.value = ''; works only for title, querySelectorAll clears none however. Only fix is clearing each one.
       },
       addBook: function() {
          this.addNewDiv.style.display = 'none';
@@ -34,6 +38,7 @@
          this.pages = pages;
          this.readStatus = readStatus;
          }
+
          let bookDiv = document.createElement('div');
          bookDiv.classList.add('book');
          this.bookList.appendChild(bookDiv);
