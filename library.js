@@ -14,6 +14,7 @@
          this.getAuthor = document.getElementById('author');
          this.getPages = document.getElementById('pages');
          this.getReadStatus = document.getElementById('read-status');
+         this.toggleRead = document.getElementById('toggle-read');
       },
       displayAddDiv: function() {
          this.addNewDiv.style.display = 'flex';
@@ -21,7 +22,6 @@
          this.getAuthor.value = '';
          this.getPages.value = '';
          this.getReadStatus.unchecked;
-         //this.input.value = ''; works only for title, querySelectorAll clears none however. Only fix is clearing each one.
       },
       addBook: function() {
          this.addNewDiv.style.display = 'none';
@@ -30,6 +30,7 @@
       bindEvents: function() {
          this.addButton.addEventListener('click', this.displayAddDiv.bind(this));
          this.submitBook.addEventListener('click', this.addBook.bind(this));
+         //need an event listener for toggleRead
       },
       getBookInfo: function() {
          let book = function(title, author, pages, readStatus) {
@@ -59,6 +60,8 @@
          let readNode = document.createElement('p');
          readNode.innerText = `Read status: ${readStatus}`;
 
+         let readBtn = document.createElement('button'); //makes an empty button
+
          let newBook = new book(title, author, pages, readStatus);
          this.library.push(newBook);
 
@@ -66,6 +69,7 @@
          bookDiv.appendChild(authorNode);
          bookDiv.appendChild(pageNode);
          bookDiv.appendChild(readNode);
+         bookDiv.appendChild(readBtn);
       },
    }
    myLibrary.init();
