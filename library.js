@@ -27,10 +27,14 @@
          this.addNewDiv.style.display = 'none';
          this.getBookInfo();
       },
+      changeReadStatus: function() {
+         //change read status of book here, might also need a function so it doesn't just say true/false
+      },
       bindEvents: function() {
          this.addButton.addEventListener('click', this.displayAddDiv.bind(this));
          this.submitBook.addEventListener('click', this.addBook.bind(this));
-         //need an event listener for toggleRead
+         this.toggleRead.addEventListener('click', this.changeReadStatus.bind(this));
+         
       },
       getBookInfo: function() {
          let book = function(title, author, pages, readStatus) {
@@ -61,6 +65,7 @@
          readNode.innerText = `Read status: ${readStatus}`;
 
          let readBtn = document.createElement('button'); //makes an empty button
+         //readButton.innerText = function that makes it say mark read or mark unread based on true/false
 
          let newBook = new book(title, author, pages, readStatus);
          this.library.push(newBook);
