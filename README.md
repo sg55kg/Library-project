@@ -4,14 +4,14 @@ Odin Library Project
 Update(8/15/21):
     More javascript today. Now the new book information is displayed on the page, but it does not inherit the book div's style. Next up will be fixing that and then adding a server to save user inputted books when the page reloads.
 
-    Second update: Fixed the issue earlier, so now when a new book is added it appears in it's own grey box like the test example. I also watched some videos on modular js ( https://www.youtube.com/watch?v=m-NYyst_tiY&list=PLoYCgNOIyGABs-wDaaxChu82q_xQgUb4f&index=2 ) and reworked how the code was written. It's a little cleaner and easier to follow now too. 
+   Second update: Fixed the issue earlier, so now when a new book is added it appears in it's own grey box like the test example. I also watched some videos on modular js ( https://www.youtube.com/watch?v=m-NYyst_tiY&list=PLoYCgNOIyGABs-wDaaxChu82q_xQgUb4f&index=2 ) and reworked how the code was written. It's a little cleaner and easier to follow now too. 
 
-    Now I just need to get the new book divs to display in a nicer grid format or something so they don't just keep going down the page in a single column.
+   Now I just need to get the new book divs to display in a nicer grid format or something so they don't just keep going down the page in a single column.
 
 Update(8/14/21):
     Worked more on the javascript. Now it takes user input and makes a new book which is pushed into the MyLibrary array, and right now the array is just console logged. 
 
-    Next will be displaying this information on the page and creating a new book div every time a new book is submitted. I also would like to add a remove book function. Also futher down the line I'd like to add storage so each person's library will be saved when the page is reloaded or a log in system. Still a lot to do and pretty overwhelming, but progress is being made.
+   Next will be displaying this information on the page and creating a new book div every time a new book is submitted. I also would like to add a remove book function. Also futher down the line I'd like to add storage so each person's library will be saved when the page is reloaded or a log in system. Still a lot to do and pretty overwhelming, but progress is being made.
 
 Update(8/13/21):
     Using flexbox to style the page. I think I'll be ready to start working more on the javascript later today.
