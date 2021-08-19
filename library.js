@@ -1,21 +1,29 @@
 (function () {
    let myLibrary = {
-      library: [],
+
+      library: [
+         // this.addTestBook,
+      ],
+
       init: function() {
          this.cacheDom();
          this.bindEvents();
+         console.log(this.library);
       },
+
       cacheDom: function() {
          this.addButton = document.getElementById('open-add-div');
          this.addNewDiv = document.getElementById('add-new');
          this.submitBook = document.getElementById('submit-new-book');
          this.bookList = document.getElementById('book-list');
+         this.testBook = document.getElementById('book');
          this.getTitle = document.getElementById('title');
          this.getAuthor = document.getElementById('author');
          this.getPages = document.getElementById('pages');
          this.getReadStatus = document.getElementById('read-status');
-         this.toggleRead = document.getElementById('toggle-read');
+         this.getToggleRead = document.querySelectorAll('toggle-read');
       },
+
       displayAddDiv: function() {
          this.addNewDiv.style.display = 'flex';
          this.getTitle.value = '';
@@ -23,32 +31,39 @@
          this.getPages.value = '';
          this.getReadStatus.unchecked;
       },
+
+      // addTestBook: function() {
+      //    this.testBook = new Book(title, author, pages, readStatus, readBtn);
+      // },
+
       addBook: function() {
          this.addNewDiv.style.display = 'none';
          this.getBookInfo();
       },
+
       changeReadStatus: function() {
          if(this.readStatus == 'true') {
             console.log('false');
          }
       },
+
       bindEvents: function() {
          this.addButton.addEventListener('click', this.displayAddDiv.bind(this));
          this.submitBook.addEventListener('click', this.addBook.bind(this));
-         this.toggleRead.addEventListener('click', function() {
-            
-               console.log('test'); //only works on the first button, new buttons don't have this function b/c id
-            
-         });
          
       },
-      getBookInfo: function() {
-         let book = function(title, author, pages, readStatus) {
+
+      Book: function(title, author, pages, readStatus, toggleRead) {
+         
          this.title = title;
          this.author = author;
          this.pages = pages;
          this.readStatus = readStatus;
-         }
+         this.toggleRead = toggleRead;
+         
+      },
+
+      getBookInfo: function() {
 
          let bookDiv = document.createElement('div');
          bookDiv.classList.add('book');
@@ -70,11 +85,14 @@
          let readNode = document.createElement('p');
          readNode.innerText = `Read status: ${readStatus}`;
 
-         let readBtn = new this.toggleRead //makes an empty button, needs a constructor for new buttons or it only works on one
-         //readBtn.classList.add('toggle-read');
+         let readBtn = document.createElement('button');
+         readBtn.classList.add('toggle-read');
          readBtn.innerText = 'Toggle Read';
+         // readBtn.addEventListener('click', () => {
+         //    console.log('test');
+         // })
 
-         let newBook = new book(title, author, pages, readStatus);
+         let newBook = new this.Book(title, author, pages, readStatus, readBtn);
          this.library.push(newBook);
 
          bookDiv.appendChild(titleNode);
@@ -82,9 +100,15 @@
          bookDiv.appendChild(pageNode);
          bookDiv.appendChild(readNode);
          bookDiv.appendChild(readBtn);
+
+         console.log(this.library);
+
       },
+
    }
+
    myLibrary.init();
+
 })();
 
 

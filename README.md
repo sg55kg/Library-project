@@ -1,6 +1,9 @@
 # Library-project
 Odin Library Project
 
+Update(8/19/21):
+    Trying to add the test book to the library, but so far no luck. I've been reading through code examples from other projects and I'm having a hard time deciding what the solution should be. It seems like there's several different ways to fix these problems. Still working on making the toggle read button work as well.
+
 Update(8/16/21):
     Working on a button for each new book div that can toggle the read status, but it got messy pretty fast. I might need to look at some of the example solutions on Odin if I can't figure it out. I think I might need a constructor for every new button. Right now the toggle read 'test' function only works on the first button because I used getElementById. QuerySelector and QuerySelectorAll didn't seem to help.
 
