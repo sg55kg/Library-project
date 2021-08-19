@@ -1,13 +1,12 @@
 (function () {
    let myLibrary = {
 
-      library: [
-         // this.addTestBook,
-      ],
+      library: [],
 
       init: function() {
          this.cacheDom();
          this.bindEvents();
+         this.addTestBook();
          console.log(this.library);
       },
 
@@ -32,9 +31,34 @@
          this.getReadStatus.unchecked;
       },
 
-      // addTestBook: function() {
-      //    this.testBook = new Book(title, author, pages, readStatus, readBtn);
-      // },
+      //might remove this (addTestBook), just wanting to see if it works and if it helps me find a solution for the button
+      addTestBook: function() {
+         
+         let bookDiv = this.testBook;
+         bookDiv.classList.add('book');
+         this.bookList.appendChild(bookDiv);
+
+         let testTitle = document.getElementById('test-title');
+         testTitle.innerText = 'Title: test2';
+         let testAuthor = document.getElementById('test-author');
+         testAuthor.innerText = 'Author: test';
+         let testPages = document.getElementById('test-pages');
+         testPages.innerText = 'Pages: 100';
+         let testStatus = document.getElementById('test-status');
+         testStatus.innerText = `Read Status: ${true}`
+         let testBtn = document.getElementById('test-button');
+         testBtn.innerText = 'Toggle Read';
+
+         let newBook = new this.Book(testTitle, testAuthor, testPages, testStatus, testBtn);
+         this.library.push(newBook);
+
+         bookDiv.appendChild(testTitle);
+         bookDiv.appendChild(testAuthor);
+         bookDiv.appendChild(testPages);
+         bookDiv.appendChild(testStatus);
+         bookDiv.appendChild(testBtn);
+
+      },
 
       addBook: function() {
          this.addNewDiv.style.display = 'none';
