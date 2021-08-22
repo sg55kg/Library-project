@@ -1,3 +1,12 @@
+:root {
+    height: 100%;
+}
+
+html {
+    width: 100%;
+    min-height: 100%;
+}
+
 header {
     color:white;
     background-color:darkslategray;
@@ -7,6 +16,10 @@ header {
 
 body {
     background:darkslategray;
+    height: 100%;
+    color: white;
+    height:auto;
+    max-width: 100%;
 }
 
 h1 {
@@ -14,11 +27,13 @@ h1 {
     background-color: darkslategray;
 }
 
-#main-container {
-    color: white;
-    height:auto;
-    justify-content:space-evenly;
-    width: 100%;
+
+
+#book-list-title {
+    padding-left: 20px;
+    padding-top: 30px;
+    margin: 0px 0px;
+    
 }
 
 #book-list {
@@ -28,13 +43,6 @@ h1 {
     grid-gap: 20px;
     margin-left: 50px;
     margin-top: 50px;
-}
-
-#book-list-title {
-    padding-left: 20px;
-    padding-top: 30px;
-    margin: 0px 0px;
-    
 }
 
 .book {
@@ -56,11 +64,14 @@ h1 {
 }
 
 #add-new {
+    position:absolute;
     flex-direction: column;
     margin: auto;
+    z-index: 1;
     width: 300px;
     padding: 20px;
     border:1px solid white;
+    background-color:darkcyan;
 }
 
 #add-new > label {
@@ -70,6 +81,21 @@ h1 {
 #submit-new-book {
     width: 150px;
     align-self: center;
+}
+
+#overlay {
+    display: none;
+    width: 100%;
+    height: 100%;
+    z-index: 0; 
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0,.6);
+}
+
+#overlay.active {
+    display: block;
 }
 
 

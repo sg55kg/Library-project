@@ -20,11 +20,13 @@
          this.getAuthor = document.getElementById('author');
          this.getPages = document.getElementById('pages');
          this.getReadStatus = document.getElementById('read-status');
-         this.getToggleRead = document.querySelectorAll('toggle-read');
+         this.getToggleRead = document.getElementsByClassName('toggle-read');
+         this.overlay = document.getElementById('overlay');
       },
 
       displayAddDiv: function() {
          this.addNewDiv.style.display = 'flex';
+         this.overlay.classList.add('active');
          this.getTitle.value = '';
          this.getAuthor.value = '';
          this.getPages.value = '';
@@ -62,12 +64,15 @@
 
       addBook: function() {
          this.addNewDiv.style.display = 'none';
+         this.overlay.classList.remove('active');
          this.getBookInfo();
       },
 
       changeReadStatus: function() {
          if(this.readStatus == 'true') {
             console.log('false');
+         } else {
+            console.log('true');
          }
       },
 
@@ -75,6 +80,9 @@
          this.addButton.addEventListener('click', this.displayAddDiv.bind(this));
          this.submitBook.addEventListener('click', this.addBook.bind(this));
          
+         for(let i = 0; i < this.getToggleRead.length; i++) {
+            this.getToggleRead[i].addEventListener('click', this.changeReadStatus.bind(this))
+         } //this works, but after bindEvents() is called at the beginning, I'm assuming that's it, so the loop stops
       },
 
       Book: function(title, author, pages, readStatus, toggleRead) {

@@ -7,12 +7,12 @@
 </head>
 <body>
     <header>
-    <h1>Library App</h1>
+        <h1>Library App</h1>
     </header>
-    <div id="main-container">
-        <button id="open-add-div">Add new book</button>
-        <h2 id="book-list-title">Book List</h2>
-        <div id="book-list">
+    
+    <button id="open-add-div">Add new book</button>
+    <h2 id="book-list-title">Book List</h2>
+    <div id="book-list">
         <div id="book" class="book">
             <p id="test-title"></p>
             <p id="test-author"></p>
@@ -20,9 +20,9 @@
             <p id="test-status"></p>
             <button id="test-button" class="toggle-read"></button>
         </div>
-        </div>
-        
-        <div id="add-new" style="display: none;">
+    </div>
+    
+    <div id="add-new" style="display: none;">
         <label for="title">Enter title:</label>
         <input type="text" id="title" placeholder="Enter Title" class="input">
         <label for="author">Enter author:</label>
@@ -32,7 +32,8 @@
         <label for="read-status">Have you finished this book?</label>
         <input type="checkbox" id="read-status" class="input">
         <button id="submit-new-book">Add book to library</button>
-        </div>
     </div>
+    
+    <div id="overlay"></div>
 
 </body>
