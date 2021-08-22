@@ -3,7 +3,7 @@ Odin Library Project
 
 Update(8/22/21):
 
-    Added an overlay feature for the add new book button when clicked, and I'm still working that out so it will look correct. I also think I found the solution for the toggleread buttons, but the problem is the bindevents() function is called once at the beginning, so the loop I made probably is running once and never again (from what I can tell). I think I want to open a new text file, rework some things, and then replace the library.js content. It sounds like a pain, but it will probably make finishing this project a lot easier. I've been learning a lot on every project and during my own studying, so I think I could rework a lot of things.
+Added an overlay feature for the add new book button when clicked, and I'm still working that out so it will look correct. I also think I found the solution for the toggleread buttons, but the problem is the bindevents() function is called once at the beginning, so the loop I made probably is running once and never again (from what I can tell). I think I want to open a new text file, rework some things, and then replace the library.js content. It sounds like a pain, but it will probably make finishing this project a lot easier. I've been learning a lot on every project and during my own studying, so I think I could rework a lot of things.
 
 Update(8/19/21):
     Trying to add the test book to the library, but so far no luck. I've been reading through code examples from other projects and I'm having a hard time deciding what the solution should be. It seems like there's several different ways to fix these problems. Still working on making the toggle read button work as well.
