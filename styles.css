@@ -71,7 +71,7 @@ h1 {
     width: 300px;
     padding: 20px;
     border:1px solid white;
-    background-color:darkcyan;
+    background-color:dimgray;
 }
 
 #add-new > label {
@@ -91,7 +91,7 @@ h1 {
     position: fixed;
     left: 0;
     top: 0;
-    background-color: rgba(0,0,0,.6);
+    background-color: rgba(7, 7, 7, 0.5);
 }
 
 #overlay.active {
