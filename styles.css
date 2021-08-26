@@ -1,11 +1,12 @@
 :root {
     height: 100%;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
 }
 
 html {
     width: 100%;
     min-height: 100%;
+    box-sizing: border-box;
 }
 
 header {
@@ -20,15 +21,19 @@ body {
     height: 100%;
     color: white;
     /* height:auto; */
-    max-width: 100%;
+    width: 100%;
 }
 
 #footer {
     background-color: black;
+    display: flex;
+    justify-content: space-between;
     color: white;
     width: 100%;
     position: fixed;
-    top: 98%;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
 }
 
 h1 {
@@ -67,9 +72,14 @@ h1 {
 #open-add-div {
     height: 50px;
     width: 100px;
-    float: right;
-    position:static;
-    margin: 20px;
+    margin: 10px;
+    background-color: white;
+    justify-self: center;
+}
+
+#book-tracker {
+    align-self: center;
+    margin-right: 60px;
 }
 
 #add-new {
@@ -78,7 +88,7 @@ h1 {
     margin: auto;
     top: 30%;
     left: 38%;
-    z-index: 1;
+    z-index: 3;
     width: 300px;
     padding: 20px;
     border:1px solid white;
@@ -99,7 +109,7 @@ h1 {
     display: none;
     width: 100%;
     height: 100%;
-    z-index: 0; 
+    z-index: 2; 
     position: fixed;
     left: 0;
     top: 0;

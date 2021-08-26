@@ -27,21 +27,19 @@ const library = [];
 function openNewBookForm() {
     newBookForm.style.display = 'flex';
     overlay.classList.add('active');
-    titleInput.value = '';
-    authorInput.value = '';
-    pagesInput.value = '';
-    getReadStatus.unchecked; //change this to a form in html file and then I can just use reset()
+    newBookForm.reset();
 }
 
 
 function submitNewBook() {
+    event.preventDefault();
     newBookForm.style.display = 'none';
     overlay.classList.remove('active');
-    displayNewBook(); 
+    addNewBook(); 
 }
 
 
-function displayNewBook() {
+function addNewBook() {
     let bookDiv = document.createElement('div');
     bookDiv.classList.add('book');
     bookList.appendChild(bookDiv);
@@ -64,12 +62,18 @@ function displayNewBook() {
     let status = getReadStatus.checked;
     let readNode = document.createElement('p');
     readNode.classList.add('book-status');
-    readNode.innerText = `Read status: ${status}`;
+    readNode.innerText = `Read status: ${status == true ? 'finished' : 'unfinished'}`;
     bookDiv.appendChild(readNode);
 
     let readBtn = document.createElement('button');
     readBtn.classList.add('toggle-read');
-    readBtn.innerText = 'Toggle Read';
+    if(status == true) {
+        readBtn.innerText = 'Mark unfinished';
+        readBtn.style.backgroundColor = 'green';
+    } else {
+        readBtn.innerText = 'Mark finished';
+        readBtn.style.backgroundColor = 'red';
+    }
     bookDiv.appendChild(readBtn);
 
     let removeBtn = document.createElement('button');
@@ -84,11 +88,15 @@ function displayNewBook() {
 
     readBtn.addEventListener('click', () => {
         if(newBook.readStatus == true) {
-            readNode.innerText = `Read status: false`;
+            readNode.innerText = `Read status: unfinished`;
+            readBtn.innerText = 'Mark finished'
+            readBtn.style.backgroundColor = 'red';
             newBook.readStatus = false;
 
         } else {
-            readNode.innerText = `Read status: true`;
+            readNode.innerText = `Read status: finished`;
+            readBtn.innerText = 'Mark unfinished';
+            readBtn.style.backgroundColor = 'green';
             newBook.readStatus = true;
 
         }

@@ -10,13 +10,13 @@
         <h1>Library App</h1>
     </header>
     
-    <button id="open-add-div">Add new book</button>
+    
     <h2 id="book-list-title">Book List</h2>
     <div id="book-list">
 
     </div>
     
-    <div id="add-new" style="display: none;">
+    <form id="add-new" style="display: none;">
         <label for="title">Enter title:</label>
         <input type="text" id="title" placeholder="Enter Title" class="input">
         <label for="author">Enter author:</label>
@@ -26,8 +26,11 @@
         <label for="read-status">Have you finished this book?</label>
         <input type="checkbox" id="read-status" class="input">
         <button id="submit-new-book">Add book to library</button>
+    </form>
+    <div id="footer">
+        <button id="open-add-div">Add new book</button>
+        <p id="book-tracker">Number of books: </p>
     </div>
-    <div id="footer">Test</div>
     
     <div id="overlay"></div>
 
