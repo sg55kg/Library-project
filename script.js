@@ -34,6 +34,7 @@ function openNewBookForm() {
 function submitNewBook() {
     event.preventDefault();
     newBookForm.style.display = 'none';
+    bookList.style.display = 'grid';
     overlay.classList.remove('active');
     addNewBook(); 
 }
@@ -66,13 +67,13 @@ function addNewBook() {
     bookDiv.appendChild(readNode);
 
     let readBtn = document.createElement('button');
-    readBtn.classList.add('toggle-read');
+    // readBtn.classList.add('toggle-read');
     if(status == true) {
         readBtn.innerText = 'Mark unfinished';
-        readBtn.style.backgroundColor = 'green';
+        readBtn.classList.add('mark-unfinished');
     } else {
         readBtn.innerText = 'Mark finished';
-        readBtn.style.backgroundColor = 'red';
+        readBtn.classList.add('mark-finished');
     }
     bookDiv.appendChild(readBtn);
 
@@ -89,14 +90,16 @@ function addNewBook() {
     readBtn.addEventListener('click', () => {
         if(newBook.readStatus == true) {
             readNode.innerText = `Read status: unfinished`;
-            readBtn.innerText = 'Mark finished'
-            readBtn.style.backgroundColor = 'red';
+            readBtn.innerText = 'Mark finished';
+            readBtn.classList.add('mark-finished');
+            readBtn.classList.remove('mark-unfinished');
             newBook.readStatus = false;
 
         } else {
             readNode.innerText = `Read status: finished`;
             readBtn.innerText = 'Mark unfinished';
-            readBtn.style.backgroundColor = 'green';
+            readBtn.classList.add('mark-unfinished');
+            readBtn.classList.remove('mark-finished');
             newBook.readStatus = true;
 
         }

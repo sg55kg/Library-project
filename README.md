@@ -3,6 +3,8 @@ Odin Library Project
 
 Update(8/25/21):
 
+Second update: Finished for now with some more styling on the buttons, and made the header and footer have fixed positions. Now that everything's laid out how it should be and the button hover effects are there, I just need to make it look nice and add the local storage API... then it should be ready to submit!
+
 Finally got the toggle read button to work by moving the event listener to after I declare a new Book. After testing this and seeing that it worked, I was easily able to figure out the remove button in a couple of minutes. Now you can toggle the read status of the book and see it change on the page, and then remove the book from the page and library array!
 
 This means really all that's left to do is to do more styling on the page, and to figure out how to implement local storage so thhe page won't completely reset when the browser is refreshed. So close!
