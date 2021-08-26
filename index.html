@@ -8,13 +8,16 @@
 <body>
     <header>
         <h1>Library App</h1>
+        <button id="login">Log in</button>
     </header>
     
     
-    <h2 id="book-list-title">Book List</h2>
+    <h2 id="book-list-title">Your Library</h2>
     <div id="book-list">
-
+        
     </div>
+    <p id="new-user-message">
+        It doesn't look like there's anything here yet! Log in, or click 'Add new book' at the bottom to continue as a guest!</p>
     
     <form id="add-new" style="display: none;">
         <label for="title">Enter title:</label>
@@ -22,7 +25,7 @@
         <label for="author">Enter author:</label>
         <input type="text" id="author" placeholder="Enter Author" class="input">
         <label for="pages">Enter number of pages:</label>
-        <input type="text" id="pages" placeholder="Pages" class="input">
+        <input type="number" id="pages" placeholder="Pages" class="input">
         <label for="read-status">Have you finished this book?</label>
         <input type="checkbox" id="read-status" class="input">
         <button id="submit-new-book">Add book to library</button>
@@ -30,9 +33,9 @@
     <div id="footer">
         <button id="open-add-div">Add new book</button>
         <div id="book-tracker">
-            <p>Number of books:</p>
-            <p>Books read:</p>
-            <p>Unfinished books:</p>
+            <p>Number of books: 0</p>
+            <p>Books read: 0</p>
+            <p>Unfinished books: 0</p>
         </div>
     </div>
     

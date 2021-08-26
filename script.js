@@ -13,6 +13,7 @@ const library = [];
 
 //Cache DOM elements
     let bookList = document.getElementById('book-list');
+    let newUserMessage = document.getElementById('new-user-message');
     let newBookFormBtn = document.getElementById('open-add-div');
     let newBookForm = document.getElementById('add-new');
     let submitBookBtn = document.getElementById('submit-new-book');
@@ -34,6 +35,7 @@ function openNewBookForm() {
 function submitNewBook() {
     event.preventDefault();
     newBookForm.style.display = 'none';
+    newUserMessage.style.display = 'none';
     bookList.style.display = 'grid';
     overlay.classList.remove('active');
     addNewBook(); 
@@ -62,12 +64,12 @@ function addNewBook() {
 
     let status = getReadStatus.checked;
     let readNode = document.createElement('p');
+    readNode.classList.add('read-text');
     readNode.classList.add('book-status');
-    readNode.innerText = `Read status: ${status == true ? 'finished' : 'unfinished'}`;
+    readNode.innerText = `${status == true ? 'Complete' : 'Unread'}`;
     bookDiv.appendChild(readNode);
 
     let readBtn = document.createElement('button');
-    // readBtn.classList.add('toggle-read');
     if(status == true) {
         readBtn.innerText = 'Mark unfinished';
         readBtn.classList.add('mark-unfinished');
@@ -89,14 +91,14 @@ function addNewBook() {
 
     readBtn.addEventListener('click', () => {
         if(newBook.readStatus == true) {
-            readNode.innerText = `Read status: unfinished`;
+            readNode.innerText = `Unread`;
             readBtn.innerText = 'Mark finished';
             readBtn.classList.add('mark-finished');
             readBtn.classList.remove('mark-unfinished');
             newBook.readStatus = false;
 
         } else {
-            readNode.innerText = `Read status: finished`;
+            readNode.innerText = `Complete`;
             readBtn.innerText = 'Mark unfinished';
             readBtn.classList.add('mark-unfinished');
             readBtn.classList.remove('mark-finished');

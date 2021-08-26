@@ -11,11 +11,14 @@ html {
 
 header {
     position:fixed;
+    display: flex;
+    justify-content: space-between;
     width: 100%;
     left: 0;
     top: 0;
-    color:darkslategray;
-    background-color:white;
+    color:rgb(31, 54, 54);
+    text-shadow: rgba(0, 0, 0, 0.65) 1px 2px;
+    background-color:rgba(101, 163, 91, 1);
     font: 30px 'Roboto Mono', monospace;
     box-shadow: black 3px 3px 8px;
     
@@ -27,10 +30,11 @@ body {
     color: white;
     /* height:auto; */
     width: 100%;
+    margin: none;
 }
 
 #footer {
-    background-color: rgba(255, 255, 255, 0.623);
+    background-color: rgba(146, 233, 132, 0.486);
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -41,18 +45,29 @@ body {
 }
 
 h1 {
-    margin: 0px 10px;
+    margin: 7px 10px;
     /* background-color: darkslategray; */
 }
 
+#login {
+    align-self: center;
+    justify-self: flex-end;
+    margin-right: 30px;
+    width: 80px;
+    height: 40px;
+}
 
 
 #book-list-title {
     font: 25px 'Roboto Mono', monospace;
-    padding-left: 20px;
+    text-align: center;
     padding-top: 30px;
-    margin-top: 70px;
+    margin-top: 100px;
     
+}
+
+#new-user-message {
+    text-align: center;
 }
 
 #book-list {
@@ -64,29 +79,41 @@ h1 {
     margin-left: 50px;
     margin-top: 50px;
     margin-right: 50px;
+    margin-bottom: 100px;
     box-shadow: rgba(0,0,0,.7) 5px 5px 5px 0px;
-    /* border: 10px solid rgba(82, 121, 64, 0.5); */
 }
 
 .book {
-    border: 1px solid white;
-    background: dimgray;
+    background: rgb(30, 51, 51);
     border-radius: 8px;
     width: 200px;
+    height: 230px;
+    max-height: 230px;
+    overflow:auto;
     display: flexbox;
-    margin: 20px;
-    padding: 10px;
+    margin: 50px;
+    padding: 15px;
     box-shadow: rgba(0, 0, 0, 0.65) 5px 5px 5px;
+    font-size: 18px;
+}
+
+.read-text {
+    text-align: center;
+    padding-top: 5px;
 }
 
 
+
 .mark-unfinished {
-    padding: 5px 10px;
+    padding: 7px 10px;
     background-color: rgba(0, 128, 0, 0.459);
     border: 2px solid rgba(2, 180, 2, 0.678);
     color: white;
     border-radius: 5px;
     width: 120px;
+    margin-top: 15px;
+    margin-left: 38px;
+    /* position: fixed; */
 }
 
 .mark-unfinished:hover {
@@ -95,12 +122,15 @@ h1 {
 }
 
 .mark-finished {
-    padding: 5px 10px;
+    padding: 7px 10px;
     background-color: rgba(255, 0, 0, 0.26);
     border: 2px solid rgba(218, 4, 4, 0.726);
     color: white;
     border-radius: 5px;
     width: 120px;
+    margin-top: 15px;
+    margin-left: 38px;
+    /* position: fixed; */
 }
 
 .mark-finished:hover {
@@ -112,15 +142,16 @@ h1 {
     background-color: rgba(92, 91, 91, 0);
     font-weight: 900;
     font-size: 20px;
-    color: rgb(0, 0, 0);
+    color: rgb(175, 174, 174);
     border: none;
-    float: right;
+    float:right;
     right: 0;
     top: 0;
+    margin-top: 25px;
+
 }
 
 .remove:hover {
-    background-color: rgba(218, 4, 4, 0.247);
     color: rgb(231, 5, 5);
     border-radius: 50%;
 }
@@ -157,19 +188,43 @@ h1 {
     left: 38%;
     z-index: 3;
     width: 300px;
+    height: 300px;
     padding: 20px;
     border:1px solid white;
     border-radius: 8px;
-    background-color:dimgray;
+    background-color:darkslategray;
 }
 
 #add-new > label {
-    padding: 5px 0 5px 0;
+    padding: 7px 0 7px 0;
+    font: 15px 'Roboto Mono', monospace;
+}
+
+#add-new > input {
+    border-radius: 4px;
+    border: none;
+    height: 20px;
 }
 
 #submit-new-book {
     width: 150px;
+    height: 50px;
+    margin-top: 25px;
     align-self: center;
+    background-color: rgb(14, 114, 14);
+    border: 2px solid rgb(78, 241, 78);
+    border-radius: 8px;
+    font: 14px 'Roboto Mono', monospace;
+    font-weight:bolder;
+    color: white;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+#submit-new-book:hover{
+    background-color: rgb(31, 54, 54);
+    border:2px solid rgb(45, 146, 45);
+    transition-duration: .3s;
 }
 
 #overlay {
