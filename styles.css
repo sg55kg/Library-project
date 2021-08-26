@@ -1,5 +1,6 @@
 :root {
     height: 100%;
+    box-sizing: border-box;
 }
 
 html {
@@ -18,8 +19,16 @@ body {
     background:darkslategray;
     height: 100%;
     color: white;
-    height:auto;
+    /* height:auto; */
     max-width: 100%;
+}
+
+#footer {
+    background-color: black;
+    color: white;
+    width: 100%;
+    position: fixed;
+    top: 98%;
 }
 
 h1 {
@@ -48,7 +57,7 @@ h1 {
 .book {
     border: 1px solid white;
     background: dimgray;
-    border-radius: 6px;
+    border-radius: 8px;
     width: 200px;
     flex-direction: row;
     margin: 20px;
@@ -67,10 +76,13 @@ h1 {
     position:absolute;
     flex-direction: column;
     margin: auto;
+    top: 30%;
+    left: 38%;
     z-index: 1;
     width: 300px;
     padding: 20px;
     border:1px solid white;
+    border-radius: 8px;
     background-color:dimgray;
 }
 
@@ -91,7 +103,7 @@ h1 {
     position: fixed;
     left: 0;
     top: 0;
-    background-color: rgba(7, 7, 7, 0.5);
+    background-color: rgba(0, 0, 0, 0.65);
 }
 
 #overlay.active {
