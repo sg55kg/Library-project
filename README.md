@@ -1,6 +1,10 @@
 # Library-project
 Odin Library Project
 
+Update(8/26/21):
+
+Local storage now works! I just need to get the book counter working, and then add in a log in system and the project will be done!
+
 Update(8/25/21):
 
 Second update: Finished for now with some more styling on the buttons, and made the header and footer have fixed positions. Now that everything's laid out how it should be and the button hover effects are there, I just need to make it look nice and add the local storage API... then it should be ready to submit!
